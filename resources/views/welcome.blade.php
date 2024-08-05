@@ -171,13 +171,13 @@
         @vite('resources/js/app.js')
         <script>
             console.log(5555)
-        //    console.log(window.Echo);
-        //     setTimeout(()=>{
-        //         window.Echo.channel('testChannel')
-        //         .listen('testingEvent',(e)=>{
-        //             console.log(e)
-        //         })
-        //     },200);
+           console.log(window.Echo);
+            setTimeout(()=>{
+                window.Echo.channel('testChannel')
+                .listen('testingEvent',(e)=>{
+                    console.log(e)
+                })
+            },200);
         </script>
     </body>
 </html>
