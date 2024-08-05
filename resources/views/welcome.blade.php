@@ -170,6 +170,7 @@
         </div> --}}
         @vite('resources/js/app.js')
         <script>
+           console.log(window.Echo);
             setTimeout(()=>{
                 window.Echo.channel('testChannel')
                 .listen('testingEvent',(e)=>{
