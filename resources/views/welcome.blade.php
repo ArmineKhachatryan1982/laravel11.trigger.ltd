@@ -172,12 +172,12 @@
         <script>
             console.log(5555)
            console.log(window.Echo);
-            setTimeout(()=>{
+            // setTimeout(()=>{
                 window.Echo.channel('testChannel')
                 .listen('testingEvent',(e)=>{
                     console.log(e)
                 })
-            },200);
+            // },200);
         </script>
     </body>
 </html>
