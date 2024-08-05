@@ -17,9 +17,10 @@ class testingEvent implements ShouldBroadcast
     /**
      * Create a new event instance.
      */
-    public function __construct()
+    public $message;
+    public function __construct($message)
     {
-        //
+        $this->message = $message;
     }
 
     /**
@@ -27,7 +28,14 @@ class testingEvent implements ShouldBroadcast
      *
      * @return array<int, \Illuminate\Broadcasting\Channel>
      */
-    public function broadcastOn(): array
+
+     public function broadcastWith():array
+     {
+        return [
+            'message'=>$this->message,
+        ];
+     }
+     public function broadcastOn(): array
     {
         return [
             new Channel('testChannel'),

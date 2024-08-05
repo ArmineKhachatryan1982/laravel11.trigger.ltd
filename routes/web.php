@@ -7,6 +7,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/test',function(){
-    event(new testingEvent);
+    event(new testingEvent('Hello Armine'));
     return 'done';
 });
